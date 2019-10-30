@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - MiniGameItem
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: DialogueTriggers
+    uniqueID: 2591395699
+    locked: 0
+  - name: Player
+    uniqueID: 397667503
     locked: 0

@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
 
     private Vector3 movement;
+
+    private Animator animator;
    
     void Start()
     {
+        animator = GetComponent<Animator>();
         player = GetComponent<Rigidbody2D>();
     }
 
@@ -22,15 +25,30 @@ public class PlayerMovement : MonoBehaviour
         movement = Vector3.zero;
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        if (movement != Vector3.zero)
-        {
-            MoveCharacter();
-        }
-        Debug.Log("change");
+        UpdateAnimationMove();
+       
+        Debug.Log("Player is moving!");
+    }
+
+    void UpdateAnimationMove()
+    {
+         if (movement != Vector3.zero)
+                {
+                    MoveCharacter();
+                    animator.SetFloat("MoveX", movement.x);
+                    animator.SetFloat("MoveY", movement.y);
+                    animator.SetBool("Moving", true);
+                }
+                else
+                {
+                    animator.SetBool("Moving", false);
+                }
     }
 
     private void MoveCharacter()
     {
-        player.MovePosition(transform.position + movement * moveSpeed * Time.deltaTime);
+        //playerMovement
+        //Normalized == diagnol is same speed as horizontal and vertical
+        player.MovePosition(transform.position + movement.normalized * moveSpeed * Time.deltaTime);
     }
 }
