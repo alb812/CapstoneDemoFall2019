@@ -9,13 +9,24 @@
         <e p="Scripts" t="Include">
           <e p="BookInteractScript.cs" t="Include" />
           <e p="CameraMovement.cs" t="Include" />
-          <e p="EnemySpawnerMG.cs" t="Include" />
-          <e p="HealthDisplay.cs" t="Include" />
+          <e p="MiniGameScripts" t="Include">
+            <e p="BeaconScript.cs" t="Include" />
+            <e p="BeaconSpawner.cs" t="Include" />
+            <e p="BearScript.cs" t="Include" />
+            <e p="EnemySpawnerMG.cs" t="Include" />
+            <e p="HealthDisplay.cs" t="Include" />
+            <e p="PlayerMiniGameMovement.cs" t="Include" />
+            <e p="PowerDisplay.cs" t="Include" />
+            <e p="ShadowBehaviorMG.cs" t="Include" />
+            <e p="SprintDisplay.cs" t="Include" />
+          </e>
+          <e p="MiniGameTriggerBearScript.cs" t="Include" />
           <e p="MiniGameTriggerScript.cs" t="Include" />
-          <e p="PlayerMiniGameMovement.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
-          <e p="PowerDisplay.cs" t="Include" />
-          <e p="ShadowBehaviorMG.cs" t="Include" />
+          <e p="Scriptable Objects" t="Include">
+            <e p="DashScript.cs" t="Include" />
+            <e p="GenericAbility.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="CapstoneDemo.sln" t="IncludeFlat" />

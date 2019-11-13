@@ -13,9 +13,6 @@ public class ShadowBehaviorMG : MonoBehaviour
 
     private Vector3 temp;   
     
-    
-    
-
     //Range of shadows to spawn
     //public int NumMin;
    // public int NumMax;

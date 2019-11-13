@@ -2991,6 +2991,24 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: -11, y: 0, z: 0}
+    second:
+      m_TileIndex: 93
+      m_TileSpriteIndex: 93
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 11, y: 0, z: 0}
+    second:
+      m_TileIndex: 93
+      m_TileSpriteIndex: 93
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 14, y: 0, z: 0}
     second:
       m_TileIndex: 37
@@ -6257,7 +6275,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 52e91120c93ce564693628f450dbcc55, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5bd1b91b9adeb1e4db8c39b73023136e, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 11a1e20d8a224614ba68cc68c40032f5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 5d5c7311a3cde254c854af4b9295633c, type: 2}
@@ -6462,7 +6480,7 @@ Tilemap:
     m_Data: {fileID: 21300840, guid: c0660661d1a8f6444ab3053947d9e4a0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300296, guid: c0660661d1a8f6444ab3053947d9e4a0, type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 3
     m_Data: {fileID: 21300224, guid: c0660661d1a8f6444ab3053947d9e4a0, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300572, guid: c0660661d1a8f6444ab3053947d9e4a0, type: 3}
@@ -6481,7 +6499,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 21301150, guid: c0660661d1a8f6444ab3053947d9e4a0, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 652
+  - m_RefCount: 654
     m_Data:
       e00: 1
       e01: 0
@@ -6500,7 +6518,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 652
+  - m_RefCount: 654
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7513,13 +7531,13 @@ CompositeCollider2D:
         Y: 250000000
       - X: -223750000
         Y: 250000000
-    - - X: 10000000
+    - - X: 50000000
         Y: 110000000
-      - X: 0
+      - X: 40000000
         Y: 110000000
-      - X: 0
+      - X: 40000000
         Y: 60000000
-      - X: 10000000
+      - X: 50000000
         Y: 60000000
     - - X: 90000000
         Y: 110000000
@@ -7529,13 +7547,13 @@ CompositeCollider2D:
         Y: 60000000
       - X: 90000000
         Y: 60000000
-    - - X: 50000000
+    - - X: 30000000
         Y: 110000000
-      - X: 40000000
+      - X: 20000000
         Y: 110000000
-      - X: 40000000
+      - X: 20000000
         Y: 60000000
-      - X: 50000000
+      - X: 30000000
         Y: 60000000
     - - X: 70000000
         Y: 110000000
@@ -7545,13 +7563,13 @@ CompositeCollider2D:
         Y: 60000000
       - X: 70000000
         Y: 60000000
-    - - X: 30000000
+    - - X: 10000000
         Y: 110000000
-      - X: 20000000
+      - X: 0
         Y: 110000000
-      - X: 20000000
+      - X: 0
         Y: 60000000
-      - X: 30000000
+      - X: 10000000
         Y: 60000000
     - - X: -73750000
         Y: 62500000
@@ -7715,6 +7733,30 @@ CompositeCollider2D:
         Y: 20000000
       - X: 100000000
         Y: 20000000
+    - - X: 120000000
+        Y: 3125000
+      - X: 120000000
+        Y: 10000000
+      - X: 110000000
+        Y: 10000000
+      - X: 110000000
+        Y: 2500000
+      - X: 113750000
+        Y: 0
+      - X: 116250000
+        Y: 0
+    - - X: -100000000
+        Y: 3125000
+      - X: -100000000
+        Y: 10000000
+      - X: -110000000
+        Y: 10000000
+      - X: -110000000
+        Y: 2500000
+      - X: -106250000
+        Y: 0
+      - X: -103750000
+        Y: 0
     - - X: 35625000
         Y: -26875000
       - X: 40000000
@@ -8518,18 +8560,18 @@ CompositeCollider2D:
       - {x: 0, y: 11}
       - {x: 0, y: 6}
       - {x: 1, y: 6}
-    - - {x: 9, y: 11}
-      - {x: 8, y: 11}
-      - {x: 8, y: 6}
-      - {x: 9, y: 6}
-    - - {x: 5, y: 11}
-      - {x: 4, y: 11}
-      - {x: 4, y: 6}
-      - {x: 5, y: 6}
     - - {x: 7, y: 11}
       - {x: 6, y: 11}
       - {x: 6, y: 6}
       - {x: 7, y: 6}
+    - - {x: 5, y: 11}
+      - {x: 4, y: 11}
+      - {x: 4, y: 6}
+      - {x: 5, y: 6}
+    - - {x: 9, y: 11}
+      - {x: 8, y: 11}
+      - {x: 8, y: 6}
+      - {x: 9, y: 6}
     - - {x: 3, y: 11}
       - {x: 2, y: 11}
       - {x: 2, y: 6}
@@ -8615,6 +8657,18 @@ CompositeCollider2D:
       - {x: 9, y: 2.1875}
       - {x: 9.25, y: 2}
       - {x: 10, y: 2}
+    - - {x: 12, y: 0.3125}
+      - {x: 12, y: 1}
+      - {x: 11, y: 1}
+      - {x: 11, y: 0.25}
+      - {x: 11.375, y: 0}
+      - {x: 11.625, y: 0}
+    - - {x: -10, y: 0.3125}
+      - {x: -10, y: 1}
+      - {x: -11, y: 1}
+      - {x: -11, y: 0.25}
+      - {x: -10.625, y: 0}
+      - {x: -10.375, y: 0}
     - - {x: 3.5625, y: -2.6875}
       - {x: 4, y: -2.25}
       - {x: 4, y: -0.4375}
@@ -8797,6 +8851,76 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &331604789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331604790}
+  - component: {fileID: 331604792}
+  - component: {fileID: 331604791}
+  m_Layer: 0
+  m_Name: MiniGameTriggerBear
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &331604790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331604789}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -17.177536, y: -3.3921518, z: -1.7723503}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1444199697}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331604791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331604789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c01adcd603b1d714bbe5eb6a49853a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &331604792
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331604789}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.040909767}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4.1090794}
+  m_EdgeRadius: 0
 --- !u!1 &475529274
 GameObject:
   m_ObjectHideFlags: 0
@@ -28635,6 +28759,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1444199696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1444199697}
+  m_Layer: 0
+  m_Name: MiniGameTriggerGroup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1444199697
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444199696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.6175346, y: 1.8421519, z: 29.88288}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1680943944}
+  - {fileID: 331604790}
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1680943942
 GameObject:
   m_ObjectHideFlags: 0
@@ -28647,7 +28803,7 @@ GameObject:
   - component: {fileID: 1680943943}
   - component: {fileID: 1680943945}
   m_Layer: 0
-  m_Name: MiniGameTrigger
+  m_Name: MiniGameTriggerDemons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28686,12 +28842,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680943942}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.24, y: -1.55, z: 28.110529}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.622465, y: -3.3921518, z: -1.7723503}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1444199697}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1680943945
 MonoBehaviour:

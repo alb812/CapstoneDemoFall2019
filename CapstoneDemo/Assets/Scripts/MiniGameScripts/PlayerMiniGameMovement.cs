@@ -17,12 +17,26 @@ public class PlayerMiniGameMovement : MonoBehaviour
     public int currentPower;
     public int startPower;
     public int maxPower = 100;
+    public int currentSprint;
+    public int maxSprint = 100;
+    
 
     public int score = 0;
     
+    EnemySpawnerMG EnemySpawnScript;
 
-    public GameObject shadows;
-
+    public GameObject beaconLight;
+    public GameObject shadows;   
+    
+    //dash
+    private bool isCooldown;
+    private float cooldown;
+    public float timer;
+    public float dashSpeed;
+    
+    private int direction;
+    private float dashTime;
+    public float startDashTime;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +45,8 @@ public class PlayerMiniGameMovement : MonoBehaviour
 
         //for UI
         currentHealth = maxHealth;
-        currentPower = startPower;
+        currentPower = 0;
+        currentSprint = maxSprint;
 
     }
 
@@ -46,6 +61,13 @@ public class PlayerMiniGameMovement : MonoBehaviour
             MoveCharacter();
             //Debug.Log("Player is moving!");
         }
+        
+        //for dash
+        if (movement != Vector3.zero && Input.GetKey(KeyCode.Space))
+        {
+           // MoveCharacterDash();
+            //Debug.Log("Player has dashed!");
+        }
 
         //for player health
         if (currentHealth > maxHealth)
@@ -59,6 +81,11 @@ public class PlayerMiniGameMovement : MonoBehaviour
             SceneManager.LoadScene("PrototypeScene1");
         }
         
+        if (currentSprint > maxSprint)
+        {
+            currentSprint = maxSprint;
+        }
+        
         //for player health
         if (currentPower > maxPower)
         {
@@ -68,7 +95,16 @@ public class PlayerMiniGameMovement : MonoBehaviour
         if (currentPower == maxPower)
         {
             //boss appears
+            //BossAppears();
         }
+        
+        if (score < 3)
+        {
+           //Destroy(GameObject.FindWithTag("Enemy"));
+            
+            ////ResetMap();
+        }
+
     }
 
     private void MoveCharacter()
@@ -76,55 +112,84 @@ public class PlayerMiniGameMovement : MonoBehaviour
         //playerMovement
         //Normalized == diagnol is same speed as horizontal and vertical
         playerMiniGame.MovePosition(transform.position + movement.normalized * moveSpeed * Time.deltaTime);
+
+        if (Input.GetButtonDown("Jump"))// && currentSprint > 0)
+        {
+            StartCoroutine("DashMove");
+        }
     }
 
-    
+    IEnumerator DashMove()
+    {
+        if (currentSprint > 0)
+        {
+            moveSpeed += 8;
+            yield return new WaitForSeconds(.2f);
+            moveSpeed -= 8;
+            isCooldown = true;
+
+            currentSprint -= 25;
+            //Calls SprintDisplay script for change to health UI
+            SprintDisplay.sprint -= 25f;
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         //player loses a life when touched by enemy
-        if (other.gameObject.CompareTag ("MiniGameItem"))
+        if (other.gameObject.CompareTag ("MiniGameItem"))// && score < 3)
         {
             //makes the item inactive
            other.gameObject.SetActive(false);
+            Vector3 position = new Vector3(Random.Range(-6.0f, 6.0f), Random.Range(-6.0f, 6.0f), 0);
+            Instantiate(beaconLight, position, Quaternion.identity);
+            
+            
+           //sets stats
            currentHealth += 25;
            HealthDisplay.health += 25f;
            currentPower += 25;
            PowerDisplay.power += 25f;
+           currentSprint = 100;
+           SprintDisplay.sprint = 100;
+            
+            //increases internal score
+            
            score++;
 
-            if (score < 3)
-            {
-                ResetMap();
-            }
-            
             if (score == 3)
             {
-                BossAppears();
+                Debug.Log("This is the attack phase");
             }
+        
             
+          // Destroy(GameObject.FindWithTag("Enemy"));
             
+               // ResetMap();
+         
            Debug.Log("Enemy has hit player!");
         }
         if (other.gameObject.tag == "Enemy")
         {
             //player touches enemy, they lose 25% health
-            currentHealth -= 25;
+            currentHealth -= 10;
             //Calls HeathDisplay script for change to health UI
-            HealthDisplay.health -= 25f;
+            HealthDisplay.health -= 10f;
             Debug.Log("Enemy has hit player!");
         }
     }
 
     void ResetMap()
     {
-        Destroy(shadows);
-        //Update();
+        //EnemySpawnScript.resetMap();
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+
     }
 
     void BossAppears()
     {
         
     }
-
 }
+

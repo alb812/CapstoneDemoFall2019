@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MiniGameTriggerScript : MonoBehaviour
+public class MiniGameTriggerBearScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class MiniGameTriggerScript : MonoBehaviour
         //player loses a life when touched by enemy
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("CombatMiniGamePrototypeDemon");
+            SceneManager.LoadScene("CombatMiniGamePrototypeBear");
         }
     }
 }
