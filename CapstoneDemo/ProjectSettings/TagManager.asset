@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - MiniGameItem
+  - Walls
   layers:
   - Default
   - TransparentFX

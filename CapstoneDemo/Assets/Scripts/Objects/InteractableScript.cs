@@ -1,39 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class BookInteractScript : MonoBehaviour
+public class InteractableScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject dialogueBox;
-    public Text dialogueText;
-    public string dialogue;
+    public Signal hintOn;
+    public Signal hintOff;
+    
     public bool PlayerInRange;
     
+    // Start is called before the first frame update
     void Start()
     {
-        //deactivates dialogue box when scene starts
-        dialogueBox.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if the player is in range and presses SPACE
-        if (Input.GetKey(KeyCode.Space) && PlayerInRange)
-        {
-            //Activates dialogue box with text set in the INSPECTOR
-                dialogueBox.SetActive(true);
-                dialogueText.text = dialogue;
-        }
+        
     }
-
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         //If player enters box collider
         if (other.CompareTag("Player"))
         {
+            
+            //shows hint
+            hintOn.Raise();
             //Sets to true
             Debug.Log("Player in radius");
             PlayerInRange = true;
@@ -44,11 +39,11 @@ public class BookInteractScript : MonoBehaviour
         //If player exits box collider
         if (other.CompareTag("Player"))
         {
+            hintOff.Raise();
             //Sets to false
             Debug.Log("Player not in radius");
             PlayerInRange = false;
             //AND removes dialogue box
-            dialogueBox.SetActive(false);
         }
     }
     

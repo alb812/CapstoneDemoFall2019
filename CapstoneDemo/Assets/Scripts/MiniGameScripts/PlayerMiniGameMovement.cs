@@ -37,6 +37,14 @@ public class PlayerMiniGameMovement : MonoBehaviour
     private int direction;
     private float dashTime;
     public float startDashTime;
+    
+    
+    //for player attack
+    //For Enemy Shooting
+    [SerializeField]
+    GameObject bullet;
+    float fireRate;
+    float nextFire;
 
     // Start is called before the first frame update
     void Start()
@@ -137,38 +145,39 @@ public class PlayerMiniGameMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         //player loses a life when touched by enemy
-        if (other.gameObject.CompareTag ("MiniGameItem"))// && score < 3)
+        if (other.gameObject.CompareTag("MiniGameItem")) 
         {
-            //makes the item inactive
-           other.gameObject.SetActive(false);
-            Vector3 position = new Vector3(Random.Range(-6.0f, 6.0f), Random.Range(-6.0f, 6.0f), 0);
-            Instantiate(beaconLight, position, Quaternion.identity);
-            
-            
-           //sets stats
-           currentHealth += 25;
-           HealthDisplay.health += 25f;
-           currentPower += 25;
-           PowerDisplay.power += 25f;
-           currentSprint = 100;
-           SprintDisplay.sprint = 100;
-            
-            //increases internal score
-            
-           score++;
+            if (score < 3)
+            {
+                //makes the item inactive
+                other.gameObject.SetActive(false);
+                Vector3 position = new Vector3(Random.Range(-6.0f, 6.0f), Random.Range(-6.0f, 6.0f), 0);
+                Instantiate(beaconLight, position, Quaternion.identity);
+
+
+                //sets stats
+                currentHealth += 25;
+                HealthDisplay.health += 25f;
+                currentPower += 34;
+                PowerDisplay.power += 34f;
+                currentSprint = 100;
+                SprintDisplay.sprint = 100;
+
+                //increases internal score
+
+                score++;
+            }
 
             if (score == 3)
             {
+                //makes item inactive
+                other.gameObject.SetActive(false);
                 Debug.Log("This is the attack phase");
+                AttackPhase();
             }
-        
-            
-          // Destroy(GameObject.FindWithTag("Enemy"));
-            
-               // ResetMap();
-         
-           Debug.Log("Enemy has hit player!");
+
         }
+
         if (other.gameObject.tag == "Enemy")
         {
             //player touches enemy, they lose 25% health
@@ -176,6 +185,15 @@ public class PlayerMiniGameMovement : MonoBehaviour
             //Calls HeathDisplay script for change to health UI
             HealthDisplay.health -= 10f;
             Debug.Log("Enemy has hit player!");
+        }
+    }
+    
+    //For attack phase
+    void AttackPhase()
+    {
+        if (Input.GetKey(KeyCode.E))
+        {
+            Instantiate(bullet, transform.position, Quaternion.identity);
         }
     }
 

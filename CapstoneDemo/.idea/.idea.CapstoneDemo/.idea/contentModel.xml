@@ -7,14 +7,15 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="BookInteractScript.cs" t="Include" />
           <e p="CameraMovement.cs" t="Include" />
+          <e p="HintScript.cs" t="Include" />
           <e p="MiniGameScripts" t="Include">
             <e p="BeaconScript.cs" t="Include" />
             <e p="BeaconSpawner.cs" t="Include" />
             <e p="BearScript.cs" t="Include" />
             <e p="EnemySpawnerMG.cs" t="Include" />
             <e p="HealthDisplay.cs" t="Include" />
+            <e p="PlayerFireball.cs" t="Include" />
             <e p="PlayerMiniGameMovement.cs" t="Include" />
             <e p="PowerDisplay.cs" t="Include" />
             <e p="ShadowBehaviorMG.cs" t="Include" />
@@ -22,11 +23,20 @@
           </e>
           <e p="MiniGameTriggerBearScript.cs" t="Include" />
           <e p="MiniGameTriggerScript.cs" t="Include" />
+          <e p="NPC" t="Include">
+            <e p="BoundedNPC.cs" t="Include" />
+          </e>
+          <e p="Objects" t="Include">
+            <e p="InteractableScript.cs" t="Include" />
+            <e p="SignScript.cs" t="Include" />
+          </e>
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Scriptable Objects" t="Include">
             <e p="DashScript.cs" t="Include" />
             <e p="GenericAbility.cs" t="Include" />
+            <e p="Signal.cs" t="Include" />
           </e>
+          <e p="SignalListener.cs" t="Include" />
         </e>
       </e>
       <e p="CapstoneDemo.sln" t="IncludeFlat" />
