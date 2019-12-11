@@ -21,18 +21,22 @@ public class BoundedNPC : SignScript
     public float maxWaitTime;
     private float waitTimeSeconds;
     
+    public bool isMovingChara;
+    
     // Start is called before the first frame update
     void Start()
     {
-        anim = GetComponent<Animator>();
-        myTransform = GetComponent<Transform>();
-        myRigidbody = GetComponent<Rigidbody2D>();
-        
-        ChangeDirection();
-
-        moveTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
-        waitTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
-
+    
+        if(isMovingChara = true){
+            anim = GetComponent<Animator>();
+            myTransform = GetComponent<Transform>();
+            myRigidbody = GetComponent<Rigidbody2D>();
+            
+            ChangeDirection();
+    
+            moveTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
+            waitTimeSeconds = Random.Range(minMoveTime, maxMoveTime);
+        }
     }
 
     // Update is called once per frame

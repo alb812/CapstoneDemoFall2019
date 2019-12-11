@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - MiniGameItem
   - Walls
+  - Interactables
+  - Fireball
   layers:
   - Default
   - TransparentFX

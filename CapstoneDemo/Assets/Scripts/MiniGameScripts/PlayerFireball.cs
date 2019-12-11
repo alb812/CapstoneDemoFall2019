@@ -11,6 +11,9 @@ public class PlayerFireball : MonoBehaviour
     //private target is enemy;
 
     private Transform target;
+    
+    public Rigidbody2D rb;
+    
 
     //BearScript target;
     
@@ -22,6 +25,8 @@ public class PlayerFireball : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Enemy").transform;
         //Destroy (gameObject, 3f);
+        
+        rb = GetComponent<Rigidbody2D> ();
     }
 
     // Update is called once per frame
@@ -29,18 +34,19 @@ public class PlayerFireball : MonoBehaviour
     {
         transform.Rotate (speedRot * Time.deltaTime);
         transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+        
     }
     
     void OnTriggerEnter2D (Collider2D col){
         //if enemy bullet hits player, it is destroyed
         if (col.gameObject.name == "Enemy") {
             Debug.Log ("Player bullet has hit Enemy!");
-            Destroy (gameObject);
+            //Destroy (this.gameObject);
         }
         //if enemy bullet hits ground, it is destroyed
         if (col.gameObject.tag == "Walls") {
             Debug.Log ("Hit surface!");
-            Destroy (gameObject);
+            //Destroy (instBullet);
         }
     }
 }

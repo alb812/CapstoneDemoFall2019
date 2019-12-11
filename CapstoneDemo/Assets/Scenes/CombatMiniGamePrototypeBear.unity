@@ -219,6 +219,11 @@ PrefabInstance:
       propertyPath: moveSpot.Array.data[7]
       value: 
       objectReference: {fileID: 1660604829}
+    - target: {fileID: 2840762731512551697, guid: 4ae772dde2e96f24197e8d1ebc8fa96c,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ae772dde2e96f24197e8d1ebc8fa96c, type: 3}
 --- !u!1 &201285363
@@ -566,6 +571,7 @@ MonoBehaviour:
   timer: 0
   dashSpeed: 50
   startDashTime: 0.1
+  canAttack: 0
   bullet: {fileID: 3166770674822528142, guid: 38f8a135134d06d4d8d1660b462221df, type: 3}
 --- !u!50 &351178600
 Rigidbody2D:
@@ -5952,7 +5958,7 @@ PrefabInstance:
     - target: {fileID: 2840762731512551697, guid: 4ae772dde2e96f24197e8d1ebc8fa96c,
         type: 3}
       propertyPath: speed
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2840762731512551697, guid: 4ae772dde2e96f24197e8d1ebc8fa96c,
         type: 3}

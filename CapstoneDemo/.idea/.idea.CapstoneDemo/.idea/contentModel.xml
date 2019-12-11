@@ -8,6 +8,8 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
+          <e p="DialogueHolder.cs" t="Include" />
+          <e p="DialogueManager.cs" t="Include" />
           <e p="HintScript.cs" t="Include" />
           <e p="MiniGameScripts" t="Include">
             <e p="BeaconScript.cs" t="Include" />
@@ -31,6 +33,9 @@
             <e p="SignScript.cs" t="Include" />
           </e>
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="QuestManager.cs" t="Include" />
+          <e p="QuestObject.cs" t="Include" />
+          <e p="QuestTriggerScript.cs" t="Include" />
           <e p="Scriptable Objects" t="Include">
             <e p="DashScript.cs" t="Include" />
             <e p="GenericAbility.cs" t="Include" />

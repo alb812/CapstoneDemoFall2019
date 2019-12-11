@@ -12,22 +12,38 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 movement;
 
     private Animator animator;
+
+    public bool CanMove;
+    private bool playerMoving;
+    
    
     void Start()
     {
         animator = GetComponent<Animator>();
         player = GetComponent<Rigidbody2D>();
+        CanMove = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        movement = Vector3.zero;
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        UpdateAnimationMove();
-       
-        Debug.Log("Player is moving!");
+
+        playerMoving = false;
+        
+        if (CanMove = true)
+        {
+           movement = Vector3.zero;
+                   movement.x = Input.GetAxisRaw("Horizontal");
+                   movement.y = Input.GetAxisRaw("Vertical");
+                   UpdateAnimationMove();
+                   Debug.Log("Player is moving!");
+        }
+
+        if (!CanMove)
+        {
+            player.velocity = Vector2.zero;
+            return;
+        }
     }
 
     void UpdateAnimationMove()
@@ -51,4 +67,23 @@ public class PlayerMovement : MonoBehaviour
         //Normalized == diagnol is same speed as horizontal and vertical
         player.MovePosition(transform.position + movement.normalized * moveSpeed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Interactables") && Input.GetKey(KeyCode.Space))
+        {
+            CanMove = false;
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (CanMove == false && Input.GetKey(KeyCode.Space))
+        {
+            CanMove = true;
+        }
+    }
+    
+    
+    
 }

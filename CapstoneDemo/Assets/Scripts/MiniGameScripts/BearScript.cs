@@ -12,12 +12,17 @@ public class BearScript : MonoBehaviour
     
     public Transform [] moveSpot;
     private int randomSpot;
+
+    public int currentEnemyHealth;
+    public int maxEnemyHealth = 100;
     
     
     void Start()
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpot.Length);
+        
+        currentEnemyHealth = maxEnemyHealth;
         
     }
 
@@ -40,6 +45,19 @@ public class BearScript : MonoBehaviour
             }
         }
         
-        
+        if (currentEnemyHealth <= 0)
+        {
+           Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Fireball")
+        {
+            currentEnemyHealth -= 10;
+            //Calls HeathDisplay script for change to health UI
+            Debug.Log("Player has hit Enemy!");
+        }
     }
 }

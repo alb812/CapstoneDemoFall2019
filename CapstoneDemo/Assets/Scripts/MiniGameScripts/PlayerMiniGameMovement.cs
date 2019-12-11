@@ -29,7 +29,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
     public GameObject shadows;   
     
     //dash
-    private bool isCooldown;
+    //private bool isCooldown;
     private float cooldown;
     public float timer;
     public float dashSpeed;
@@ -40,9 +40,11 @@ public class PlayerMiniGameMovement : MonoBehaviour
     
     
     //for player attack
+    public bool canAttack;
     //For Enemy Shooting
     [SerializeField]
     GameObject bullet;
+    public GameObject instBullet;
     float fireRate;
     float nextFire;
 
@@ -55,6 +57,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
         currentHealth = maxHealth;
         currentPower = 0;
         currentSprint = maxSprint;
+        canAttack = false;
 
     }
 
@@ -113,6 +116,12 @@ public class PlayerMiniGameMovement : MonoBehaviour
             ////ResetMap();
         }
 
+        if (score == 3)
+        {
+            canAttack = true;
+            AttackPhase();
+        }
+
     }
 
     private void MoveCharacter()
@@ -134,7 +143,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
             moveSpeed += 8;
             yield return new WaitForSeconds(.2f);
             moveSpeed -= 8;
-            isCooldown = true;
+            //isCooldown = true;
 
             currentSprint -= 25;
             //Calls SprintDisplay script for change to health UI
@@ -173,7 +182,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
                 //makes item inactive
                 other.gameObject.SetActive(false);
                 Debug.Log("This is the attack phase");
-                AttackPhase();
+                //AttackPhase();
             }
 
         }
@@ -193,18 +202,12 @@ public class PlayerMiniGameMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E))
         {
-            Instantiate(bullet, transform.position, Quaternion.identity);
+            instBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         }
+        Destroy(instBullet, 5f);
     }
 
-    void ResetMap()
-    {
-        //EnemySpawnScript.resetMap();
-       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
-
-    }
-
+   
     void BossAppears()
     {
         
