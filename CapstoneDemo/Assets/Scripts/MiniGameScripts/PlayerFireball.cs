@@ -13,11 +13,13 @@ public class PlayerFireball : MonoBehaviour
     private Transform target;
     
     public Rigidbody2D rb;
+
+    private PlayerMiniGameMovement PlayerMoveScript;
     
 
     //BearScript target;
     
-    private Vector3 speedRot = Vector3.right * 50f;
+    private Vector3 speedRot = Vector3.right * 30f;
     
     
     // Start is called before the first frame update

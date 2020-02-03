@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2549118365579439678}
   - component: {fileID: 1095470165824871253}
   m_Layer: 0
-  m_Name: Fireball_0
+  m_Name: Fireball
   m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6780da22721f93e42be8bdf88c562837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 1095470165824871253}
 --- !u!58 &2549118365579439678
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -130,5 +130,5 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4

@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class BearScript : MonoBehaviour
 {
@@ -15,7 +19,9 @@ public class BearScript : MonoBehaviour
 
     public int currentEnemyHealth;
     public int maxEnemyHealth = 100;
-    
+
+    public string enemyQuestName;
+    private QuestManager theQM;
     
     void Start()
     {
@@ -23,7 +29,10 @@ public class BearScript : MonoBehaviour
         randomSpot = Random.Range(0, moveSpot.Length);
         
         currentEnemyHealth = maxEnemyHealth;
-        
+        theQM = FindObjectOfType<QuestManager>();
+
+
+
     }
 
     // Update is called once per frame
@@ -48,6 +57,8 @@ public class BearScript : MonoBehaviour
         if (currentEnemyHealth <= 0)
         {
            Destroy(gameObject);
+            //EnemyAlive --;
+            theQM.enemyKilled = enemyQuestName;
         }
     }
 

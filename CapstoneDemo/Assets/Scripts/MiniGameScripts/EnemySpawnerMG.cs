@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class EnemySpawnerMG : MonoBehaviour
 {
     
-    //array of prefabs to spawn
+  /* //array of prefabs to spawn
   // public GameObject shadowsPrefab;
    //public GameObject[] enemy;
     //make prefab a gameobject so it can be deleted
@@ -122,5 +122,49 @@ public class EnemySpawnerMG : MonoBehaviour
 // Vector3 position = new Vector3(Random.Range(-3.0f, 3.0f), Random.Range(-3.0f, 3.0f), 0);
 //Instantiate(enemiesGO, position, Quaternion.identity);
 //}*/
+
+    public Transform[] spawnPoints;
+    public GameObject[] prefabs;
+    public float minTime, maxTime;
+    public int numberOfSpawns = 5;
+ 
+    private float timer = 0f;
+    private int lastSpawnPointIndex = -1;
+ 
+    private void Update()
+    {
+        if (timer <= 0f)
+        {
+            SpawnItems();
+            ResetTimer();
+        }
+        timer -= Time.deltaTime;
+    }
+ 
+    private void SpawnItems()
+    {
+        for (int i = 0; i < numberOfSpawns; i++)
+        {
+            Transform spawnPoint = GetNextSpawnPoint();
+            GameObject prefab = prefabs[Random.Range(0, prefabs.Length)];
+            Instantiate(prefab, spawnPoint);
+        }
+    }
+ 
+    private Transform GetNextSpawnPoint()
+    {
+        // We want a random index from the error, but not the same as last time.
+        // So we at least more one index further and stop one index before the last.
+        // The % operator loops back to the beginning of zero, if the index overshoots the array length.
+        int index = (lastSpawnPointIndex + Random.Range(1, spawnPoints.Length - 1)) % spawnPoints.Length;
+        lastSpawnPointIndex = index;
+        return spawnPoints[index];
+    }
+ 
+    private void ResetTimer()
+    {
+        timer = Random.Range(minTime, maxTime);
+    }
+}
  
  

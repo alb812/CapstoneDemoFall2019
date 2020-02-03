@@ -48,6 +48,10 @@ public class PlayerMiniGameMovement : MonoBehaviour
     float fireRate;
     float nextFire;
 
+    public int enemyAlive;
+    
+    public ShadowBehaviorMG shadowScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +62,8 @@ public class PlayerMiniGameMovement : MonoBehaviour
         currentPower = 0;
         currentSprint = maxSprint;
         canAttack = false;
+
+        shadowScript.isGrowing = true;
 
     }
 
@@ -121,6 +127,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
             canAttack = true;
             AttackPhase();
         }
+        
 
     }
 
@@ -175,6 +182,9 @@ public class PlayerMiniGameMovement : MonoBehaviour
                 //increases internal score
 
                 score++;
+                
+                
+                
             }
 
             if (score == 3)
@@ -184,7 +194,6 @@ public class PlayerMiniGameMovement : MonoBehaviour
                 Debug.Log("This is the attack phase");
                 //AttackPhase();
             }
-
         }
 
         if (other.gameObject.tag == "Enemy")
@@ -200,11 +209,11 @@ public class PlayerMiniGameMovement : MonoBehaviour
     //For attack phase
     void AttackPhase()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             instBullet = Instantiate(bullet, transform.position, Quaternion.identity);
         }
-        Destroy(instBullet, 5f);
+        Destroy(instBullet, 2f);
     }
 
    
@@ -212,5 +221,6 @@ public class PlayerMiniGameMovement : MonoBehaviour
     {
         
     }
+    
 }
 

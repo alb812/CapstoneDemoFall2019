@@ -6,33 +6,36 @@ public class ShadowBehaviorMG : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private GameObject shadows;
+    private EnemySpawnerMG shadows;
     
     //speed object scales
     public float speed = 3.0f;
+    private Vector3 temp;
+    public int numOfSpawns = 5;
 
-    private Vector3 temp;   
+    public bool isGrowing;
+
+
+    public PlayerMiniGameMovement thePlayerScript;
     
-    //Range of shadows to spawn
-    //public int NumMin;
-   // public int NumMax;
-    
-    //how many prefabs were created
-    //public int num;
     
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        temp = transform.localScale;
-        //increase size by temp 
-        temp.x += Time.deltaTime;
-        temp.y += Time.deltaTime;
-        //
-        transform.localScale = temp;
+       
+         temp = transform.localScale;
+         //increase size by temp 
+         temp.x += Time.deltaTime;
+         temp.y += Time.deltaTime;                                             
+         //                                             
+          transform.localScale = temp;                                                                                                 
+                                                            
+        
+        
     }
 }
