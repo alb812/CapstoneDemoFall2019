@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool CanMove;
     private bool playerMoving;
+
+    public VectorValue startingPos;
     
    
     void Start()
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         player = GetComponent<Rigidbody2D>();
         CanMove = true;
+        transform.position = startingPos.initialValue;
     }
 
     // Update is called once per frame

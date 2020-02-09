@@ -50,7 +50,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
 
     public int enemyAlive;
     
-    public ShadowBehaviorMG shadowScript;
+    //public ShadowBehaviorMG shadowScript;
 
     // Start is called before the first frame update
     void Start()
@@ -63,7 +63,6 @@ public class PlayerMiniGameMovement : MonoBehaviour
         currentSprint = maxSprint;
         canAttack = false;
 
-        shadowScript.isGrowing = true;
 
     }
 
@@ -127,8 +126,6 @@ public class PlayerMiniGameMovement : MonoBehaviour
             canAttack = true;
             AttackPhase();
         }
-        
-
     }
 
     private void MoveCharacter()
@@ -181,10 +178,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
 
                 //increases internal score
 
-                score++;
-                
-                
-                
+                score++; 
             }
 
             if (score == 3)

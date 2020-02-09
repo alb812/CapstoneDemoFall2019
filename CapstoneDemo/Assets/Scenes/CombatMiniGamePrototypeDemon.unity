@@ -612,7 +612,6 @@ MonoBehaviour:
   bullet: {fileID: 0}
   instBullet: {fileID: 0}
   enemyAlive: 0
-  shadowScript: {fileID: 0}
 --- !u!50 &351178600
 Rigidbody2D:
   serializedVersion: 4
@@ -3629,23 +3628,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71efae17edb362a46ae45b36d729265e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
-  - {fileID: 1441242925}
-  - {fileID: 1718172327}
-  - {fileID: 448164201}
-  - {fileID: 1177141299}
-  - {fileID: 764366651}
-  - {fileID: 979520476}
-  - {fileID: 224225578}
-  - {fileID: 404720365}
-  - {fileID: 1462007169}
-  - {fileID: 189671358}
-  - {fileID: 1155254807}
-  prefabs:
-  - {fileID: 1955029852868929020, guid: 688489de109b8bc4d8243037af08d7c1, type: 3}
-  minTime: 0
-  maxTime: 5
-  numberOfSpawns: 5
 --- !u!61 &1514573666
 BoxCollider2D:
   m_ObjectHideFlags: 0

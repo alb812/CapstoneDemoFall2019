@@ -11,13 +11,6 @@ public class ShadowBehaviorMG : MonoBehaviour
     //speed object scales
     public float speed = 3.0f;
     private Vector3 temp;
-    public int numOfSpawns = 5;
-
-    public bool isGrowing;
-
-
-    public PlayerMiniGameMovement thePlayerScript;
-    
     
     void Start()
     {
@@ -27,7 +20,7 @@ public class ShadowBehaviorMG : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       //makes the shadows increase in size
          temp = transform.localScale;
          //increase size by temp 
          temp.x += Time.deltaTime;

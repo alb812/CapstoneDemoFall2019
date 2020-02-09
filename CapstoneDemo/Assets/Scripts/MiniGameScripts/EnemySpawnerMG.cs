@@ -121,11 +121,12 @@ public class EnemySpawnerMG : MonoBehaviour
 //{
 // Vector3 position = new Vector3(Random.Range(-3.0f, 3.0f), Random.Range(-3.0f, 3.0f), 0);
 //Instantiate(enemiesGO, position, Quaternion.identity);
-//}*/
+//}
 
     public Transform[] spawnPoints;
     public GameObject[] prefabs;
     public float minTime, maxTime;
+    //number of spawns I want
     public int numberOfSpawns = 5;
  
     private float timer = 0f;
