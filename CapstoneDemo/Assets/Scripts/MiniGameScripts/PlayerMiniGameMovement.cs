@@ -22,8 +22,14 @@ public class PlayerMiniGameMovement : MonoBehaviour
     
 
     public int score = 0;
+    public int fightPhase;
+    public bool scoreIsIncreased;
+   
+    public GameObject bears;
+    public int creaturesKilled;
+    private BearScript BearScript;
     
-    EnemySpawnerMG EnemySpawnScript;
+    private EnemySpawnerMG EnemySpawnScript;
 
     public GameObject beaconLight;
     public GameObject shadows;   
@@ -63,6 +69,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
         currentSprint = maxSprint;
         canAttack = false;
 
+        scoreIsIncreased = false;
 
     }
 
@@ -158,7 +165,7 @@ public class PlayerMiniGameMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         //player loses a life when touched by enemy
-        if (other.gameObject.CompareTag("MiniGameItem")) 
+        if (other.gameObject.CompareTag("MiniGameItem"))
         {
             if (score < 3)
             {
@@ -166,7 +173,6 @@ public class PlayerMiniGameMovement : MonoBehaviour
                 other.gameObject.SetActive(false);
                 Vector3 position = new Vector3(Random.Range(-6.0f, 6.0f), Random.Range(-6.0f, 6.0f), 0);
                 Instantiate(beaconLight, position, Quaternion.identity);
-
 
                 //sets stats
                 currentHealth += 25;
@@ -178,28 +184,50 @@ public class PlayerMiniGameMovement : MonoBehaviour
 
                 //increases internal score
 
-                score++; 
+               score++;
+               scoreIsIncreased = true;
+
             }
 
-            if (score == 3)
+            if (score > 2)
             {
                 //makes item inactive
                 other.gameObject.SetActive(false);
                 Debug.Log("This is the attack phase");
                 //AttackPhase();
             }
-        }
 
-        if (other.gameObject.tag == "Enemy")
-        {
-            //player touches enemy, they lose 25% health
-            currentHealth -= 10;
-            //Calls HeathDisplay script for change to health UI
-            HealthDisplay.health -= 10f;
-            Debug.Log("Enemy has hit player!");
+            if (score == 3)
+            {
+                if (fightPhase == 1)
+                {
+                    //bears killed == 2, then challenge is completed
+                    //if (other.gameObject.tag == "Enemy")
+                    if (BearScript.bearsKilled == 2)
+                    {
+                        SceneManager.LoadScene("PrototypeScene1");
+                    }
+
+
+                    if (fightPhase == 2)
+                    {
+                        //demon boss
+                    }
+
+                }
+            }
+
+            if (other.gameObject.tag == "Enemy")
+            {
+                //player touches enemy, they lose 25% health
+                currentHealth -= 10;
+                //Calls HeathDisplay script for change to health UI
+                HealthDisplay.health -= 10f;
+                Debug.Log("Enemy has hit player!");
+            }
         }
     }
-    
+
     //For attack phase
     void AttackPhase()
     {
@@ -217,4 +245,5 @@ public class PlayerMiniGameMovement : MonoBehaviour
     }
     
 }
+
 

@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CombatMiniGamePrototypeBear.unity
     guid: f38547f5f89a76d40acfa714e658f901
   - enabled: 1
+    path: Assets/Scenes/DungeonScene.unity
+    guid: 76302c1f00896db499d3170186f256ae
+  - enabled: 1
     path: Assets/Scenes/CombatMiniGamePrototypeDemon.unity
     guid: d0ab1541cbd908f4782d2ed9cbfecef4
   m_configObjects: {}

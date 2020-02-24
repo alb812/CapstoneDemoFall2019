@@ -22,6 +22,8 @@ public class BearScript : MonoBehaviour
 
     public string enemyQuestName;
     private QuestManager theQM;
+
+    public int bearsKilled;
     
     void Start()
     {
@@ -30,17 +32,13 @@ public class BearScript : MonoBehaviour
         
         currentEnemyHealth = maxEnemyHealth;
         theQM = FindObjectOfType<QuestManager>();
-
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
         //moves bears to random empty gameobject called moveSpot
-        transform.position =
-            Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, moveSpot[randomSpot].position, speed * Time.deltaTime);
 
         if (Vector2.Distance(transform.position, moveSpot[randomSpot].position) < 0.2f)
         {
@@ -58,7 +56,7 @@ public class BearScript : MonoBehaviour
         {
            Destroy(gameObject);
             //EnemyAlive --;
-            theQM.enemyKilled = enemyQuestName;
+           // theQM.enemyKilled = enemyQuestName;
         }
     }
 

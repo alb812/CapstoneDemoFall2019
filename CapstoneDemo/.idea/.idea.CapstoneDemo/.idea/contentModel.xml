@@ -4,10 +4,502 @@
     <e p="C:\Users\nitab\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\nitab\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_CapstoneDemo.-74168614.00" t="ExcludeRecursive" />
     <e p="C:\Users\nitab\Unity Projects\CapstoneDemoFolder\CapstoneDemo" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Pixel Crushers" t="Include">
+            <e p="Common" t="Include">
+              <e p="_README.txt" t="Include" />
+              <e p="Templates" t="Include">
+                <e p="SaverTemplate.cs" t="Include" />
+              </e>
+              <e p="Wrappers" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="Text" t="Include">
+                    <e p="StringAssetMenu.cs" t="Include" />
+                    <e p="TextTableAssetMenu.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Message System" t="Include">
+                  <e p="DataSynchronizer.cs" t="Include" />
+                  <e p="MessageEvents.cs" t="Include" />
+                  <e p="MessageSystemLogger.cs" t="Include" />
+                </e>
+                <e p="Misc" t="Include">
+                  <e p="AlwaysFaceCamera.cs" t="Include" />
+                  <e p="CheckPhysics2D.cs" t="Include" />
+                  <e p="DontDestroyGameObject.cs" t="Include" />
+                  <e p="EditorNote.cs" t="Include" />
+                  <e p="InstantiatePrefabs.cs" t="Include" />
+                  <e p="LODManager.cs" t="Include" />
+                </e>
+                <e p="Save System" t="Include">
+                  <e p="Misc" t="Include">
+                    <e p="AutoSaveLoad.cs" t="Include" />
+                    <e p="SaveSystemEvents.cs" t="Include" />
+                    <e p="SaveSystemMethods.cs" t="Include" />
+                    <e p="SaveSystemTestMenu.cs" t="Include" />
+                    <e p="ScenePortal.cs" t="Include" />
+                  </e>
+                  <e p="Savers" t="Include">
+                    <e p="ActiveSaver.cs" t="Include" />
+                    <e p="AnimatorSaver.cs" t="Include" />
+                    <e p="DestructibleSaver.cs" t="Include" />
+                    <e p="EnabledSaver.cs" t="Include" />
+                    <e p="PositionSaver.cs" t="Include" />
+                  </e>
+                  <e p="SaveSystem.cs" t="Include" />
+                  <e p="Serializers" t="Include">
+                    <e p="Binary" t="Include">
+                      <e p="BinaryDataSerializer.cs" t="Include" />
+                    </e>
+                    <e p="JsonDataSerializer.cs" t="Include" />
+                  </e>
+                  <e p="Spawning" t="Include">
+                    <e p="SpawnedObject.cs" t="Include" />
+                    <e p="SpawnedObjectManager.cs" t="Include" />
+                  </e>
+                  <e p="Storers" t="Include">
+                    <e p="DiskSavedGameDataStorer.cs" t="Include" />
+                    <e p="PlayerPrefsSavedGameDataStorer.cs" t="Include" />
+                  </e>
+                  <e p="Transitions" t="Include">
+                    <e p="StandardSceneTransitionManager.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Text" t="Include">
+                  <e p="GlobalTextTable.cs" t="Include" />
+                  <e p="StringAsset.cs" t="Include" />
+                  <e p="TextTable.cs" t="Include" />
+                </e>
+                <e p="UI" t="Include">
+                  <e p="InputDeviceManager.cs" t="Include" />
+                  <e p="InputDeviceMethods.cs" t="Include" />
+                  <e p="KeepRectTransformOnscreen.cs" t="Include" />
+                  <e p="LocalizeUI.cs" t="Include" />
+                  <e p="UIButtonKeyTrigger.cs" t="Include" />
+                  <e p="UILocalizationManager.cs" t="Include" />
+                  <e p="UIPanel.cs" t="Include" />
+                  <e p="UIScrollbarEnabler.cs" t="Include" />
+                  <e p="UITextColor.cs" t="Include" />
+                </e>
+                <e p="UnityEvents" t="Include">
+                  <e p="CollisionEvent.cs" t="Include" />
+                  <e p="DisappearEvent.cs" t="Include" />
+                  <e p="TimedEvent.cs" t="Include" />
+                  <e p="TriggerEvent.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Dialogue System" t="Include">
+              <e p="_README.txt" t="Include" />
+              <e p="_README_EVALUATION.txt" t="Include" />
+              <e p="Demo" t="Include">
+                <e p="_README.txt" t="Include" />
+                <e p="Art" t="Include">
+                  <e p="Sounds" t="Include">
+                    <e p="_README.txt" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Documentation" t="Include">
+                <e p="_README.txt" t="Include" />
+              </e>
+              <e p="Prefabs" t="Include">
+                <e p="Art" t="Include">
+                  <e p="Textures" t="Include">
+                    <e p="UnityUI" t="Include">
+                      <e p="_README.txt" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Camera Angle Studio" t="Include">
+                  <e p="_README.txt" t="Include" />
+                </e>
+                <e p="Deprecated" t="Include">
+                  <e p="Legacy Unity GUI Prefabs" t="Include">
+                    <e p="_README.txt" t="Include" />
+                    <e p="Circle" t="Include">
+                      <e p="Textures" t="Include">
+                        <e p="_README.txt" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Computer" t="Include">
+                      <e p="Bitwise Font" t="Include">
+                        <e p="!license.txt" t="Include" />
+                      </e>
+                      <e p="Typing.txt" t="Include" />
+                    </e>
+                    <e p="Necromancer" t="Include">
+                      <e p="_README.txt" t="Include" />
+                      <e p="Necromancer GUI" t="Include">
+                        <e p="Kingthings.txt" t="Include" />
+                        <e p="Readme.txt" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Shared Audio" t="Include">
+                      <e p="_README.txt" t="Include" />
+                    </e>
+                    <e p="Shared Fonts" t="Include">
+                      <e p="Orbitron" t="Include">
+                        <e p="SIL Open Font License.txt" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Shared Textures" t="Include">
+                      <e p="_README.txt" t="Include" />
+                    </e>
+                    <e p="Wheel" t="Include">
+                      <e p="_README.txt" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Unity UI Prefabs" t="Include">
+                    <e p="_README.txt" t="Include" />
+                    <e p="Mobile" t="Include">
+                      <e p="_IMPORTANT_README.txt" t="Include" />
+                    </e>
+                    <e p="Speech Bubble" t="Include">
+                      <e p="_README.txt" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="Options" t="Include">
+                    <e p="Timeline" t="Include">
+                      <e p="BarkDrawer.cs" t="Include" />
+                      <e p="PlaySequenceBehaviourDrawer.cs" t="Include" />
+                      <e p="SetQuestStateBehaviourDrawer.cs" t="Include" />
+                      <e p="ShowAlertBehaviourDrawer.cs" t="Include" />
+                      <e p="StartConversationBehaviourDrawer.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Options" t="Include">
+                  <e p="Cinemachine" t="Include">
+                    <e p="Sequencer Commands" t="Include">
+                      <e p="SequencerCommandCinemachinePriority.cs" t="Include" />
+                      <e p="SequencerCommandCinemachineTarget.cs" t="Include" />
+                    </e>
+                    <e p="Triggers" t="Include">
+                      <e p="CinemachineCameraPriorityOnDialogueEvent.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Timeline" t="Include">
+                    <e p="Playables" t="Include">
+                      <e p="Bark" t="Include">
+                        <e p="BarkBehaviour.cs" t="Include" />
+                        <e p="BarkClip.cs" t="Include" />
+                        <e p="BarkMixerBehaviour.cs" t="Include" />
+                        <e p="BarkTrack.cs" t="Include" />
+                      </e>
+                      <e p="Continue" t="Include">
+                        <e p="ContinueConversationBehaviour.cs" t="Include" />
+                        <e p="ContinueConversationClip.cs" t="Include" />
+                        <e p="ContinueConversationTrack.cs" t="Include" />
+                        <e p="ConversationContinueMixerBehaviour.cs" t="Include" />
+                      </e>
+                      <e p="Conversation" t="Include">
+                        <e p="ConversationMixerBehaviour.cs" t="Include" />
+                        <e p="ConversationTrack.cs" t="Include" />
+                        <e p="StartConversationBehaviour.cs" t="Include" />
+                        <e p="StartConversationClip.cs" t="Include" />
+                      </e>
+                      <e p="PlaySequence" t="Include">
+                        <e p="PlaySequenceBehaviour.cs" t="Include" />
+                        <e p="PlaySequenceClip.cs" t="Include" />
+                        <e p="PlaySequenceMixerBehaviour.cs" t="Include" />
+                        <e p="PlaySequenceTrack.cs" t="Include" />
+                      </e>
+                      <e p="QuestState" t="Include">
+                        <e p="QuestStateMixerBehaviour.cs" t="Include" />
+                        <e p="QuestStateTrack.cs" t="Include" />
+                        <e p="SetQuestStateBehaviour.cs" t="Include" />
+                        <e p="SetQuestStateClip.cs" t="Include" />
+                      </e>
+                      <e p="ShowAlert" t="Include">
+                        <e p="AlertMixerBehaviour.cs" t="Include" />
+                        <e p="AlertTrack.cs" t="Include" />
+                        <e p="ShowAlertBehaviour.cs" t="Include" />
+                        <e p="ShowAlertClip.cs" t="Include" />
+                      </e>
+                      <e p="Utility" t="Include">
+                        <e p="PreviewUI.cs" t="Include" />
+                      </e>
+                    </e>
+                    <e p="Sequencer" t="Include">
+                      <e p="SequencerCommandTimeline.cs" t="Include" />
+                    </e>
+                    <e p="Triggers" t="Include">
+                      <e p="TimelineTrigger.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+              <e p="Templates" t="Include">
+                <e p="Link" t="Include">
+                  <e p="_README.txt" t="Include" />
+                  <e p="link.xml" t="Include" />
+                  <e p="link_asmdef.xml" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="_README.txt" t="Include" />
+                  <e p="Aurora" t="Include">
+                    <e p="TemplateNWScript.cs" t="Include" />
+                  </e>
+                  <e p="Editor" t="Include">
+                    <e p="ConverterWindowTemplate.cs" t="Include" />
+                    <e p="CustomFieldType_Conversation.cs" t="Include" />
+                    <e p="CustomFieldType_TemplateType.cs" t="Include" />
+                  </e>
+                  <e p="PersistentDataTemplate.cs" t="Include" />
+                  <e p="SequencerCommandTemplate.cs" t="Include" />
+                  <e p="TemplateBarkUI.cs" t="Include" />
+                  <e p="TemplateCustomLua.cs" t="Include" />
+                  <e p="TemplateDialogueUI.cs" t="Include" />
+                  <e p="TemplateQuestLogWindow.cs" t="Include" />
+                  <e p="TemplateTextFieldUI.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Third Party Support" t="Include">
+                <e p="_README.txt" t="Include" />
+              </e>
+              <e p="Wrappers" t="Include">
+                <e p="Demo" t="Include">
+                  <e p="DemoMenu.cs" t="Include" />
+                  <e p="DieOnTakeDamage.cs" t="Include" />
+                  <e p="NavigateOnMouseClick.cs" t="Include" />
+                  <e p="SimpleController.cs" t="Include" />
+                  <e p="SmoothCameraWithBumper.cs" t="Include" />
+                </e>
+                <e p="Deprecated" t="Include">
+                  <e p="_README.txt" t="Include" />
+                  <e p="Legacy GUI" t="Include">
+                    <e p="AudioEffect.cs" t="Include" />
+                    <e p="ContinueButtonFastForward.cs" t="Include" />
+                    <e p="FadeEffect.cs" t="Include" />
+                    <e p="FlashEffect.cs" t="Include" />
+                    <e p="GUIButton.cs" t="Include" />
+                    <e p="GUIControl.cs" t="Include" />
+                    <e p="GUIImage.cs" t="Include" />
+                    <e p="GUILabel.cs" t="Include" />
+                    <e p="GUIProgressBar.cs" t="Include" />
+                    <e p="GUIRoot.cs" t="Include" />
+                    <e p="GUIScrollView.cs" t="Include" />
+                    <e p="GUITextField.cs" t="Include" />
+                    <e p="GUIVisibleControl.cs" t="Include" />
+                    <e p="GUIWindow.cs" t="Include" />
+                    <e p="SlideEffect.cs" t="Include" />
+                    <e p="TimerEffect.cs" t="Include" />
+                    <e p="TypewriterEffect.cs" t="Include" />
+                    <e p="UnityBarkUI.cs" t="Include" />
+                    <e p="UnityBarkUIOnGUI.cs" t="Include" />
+                    <e p="UnityDialogueUI.cs" t="Include" />
+                    <e p="UnityGUIQuestLogWindow.cs" t="Include" />
+                    <e p="UnityTextFieldUI.cs" t="Include" />
+                  </e>
+                  <e p="Localized Text" t="Include">
+                    <e p="LocalizedTextTable.cs" t="Include" />
+                  </e>
+                  <e p="Triggers" t="Include">
+                    <e p="AlertTrigger.cs" t="Include" />
+                    <e p="BarkOnDialogueEvent.cs" t="Include" />
+                    <e p="BarkTrigger.cs" t="Include" />
+                    <e p="ConversationTrigger.cs" t="Include" />
+                    <e p="LuaOnDialogueEvent.cs" t="Include" />
+                    <e p="LuaTrigger.cs" t="Include" />
+                    <e p="QuestTrigger.cs" t="Include" />
+                    <e p="SendMessageOnDialogueEvent.cs" t="Include" />
+                    <e p="SequenceTrigger.cs" t="Include" />
+                    <e p="SetActiveOnDialogueEvent.cs" t="Include" />
+                    <e p="SetAnimationOnDialogueEvent.cs" t="Include" />
+                    <e p="SetAnimatorStateOnDialogueEvent.cs" t="Include" />
+                    <e p="SetComponentEnabledOnDialogueEvent.cs" t="Include" />
+                    <e p="SetEnabledOnDialogueEvent.cs" t="Include" />
+                    <e p="SetQuestStateOnDialogueEvent.cs" t="Include" />
+                    <e p="ShowCursorOnConversation.cs" t="Include" />
+                    <e p="StartConversationOnDialogueEvent.cs" t="Include" />
+                    <e p="StartSequenceOnDialogueEvent.cs" t="Include" />
+                    <e p="StopConversationIfTooFar.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Importers" t="Include">
+                  <e p="Articy" t="Include">
+                    <e p="ArticyLuaFunctions.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Manager" t="Include">
+                  <e p="DialogueSystemController.cs" t="Include" />
+                  <e p="DialogueSystemEvents.cs" t="Include" />
+                  <e p="ExtraDatabases.cs" t="Include" />
+                </e>
+                <e p="MVC" t="Include">
+                  <e p="Actor" t="Include">
+                    <e p="ActorSubtitleColor.cs" t="Include" />
+                    <e p="BarkGroupMember.cs" t="Include" />
+                    <e p="DefaultCameraAngle.cs" t="Include" />
+                    <e p="DialogueActor.cs" t="Include" />
+                    <e p="Override" t="Include">
+                      <e p="OverrideDialogueUI.cs" t="Include" />
+                      <e p="OverrideDisplaySettings.cs" t="Include" />
+                    </e>
+                    <e p="OverrideActorName.cs" t="Include" />
+                  </e>
+                  <e p="Model" t="Include">
+                    <e p="DialogueDatabase.cs" t="Include" />
+                  </e>
+                  <e p="View" t="Include">
+                    <e p="BarkDialogueUI.cs" t="Include" />
+                    <e p="SequencerShortcuts.cs" t="Include" />
+                    <e p="TextlessBarkUI.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Options" t="Include">
+                  <e p="Cinemachine" t="Include">
+                    <e p="CinemachineCameraPriorityOnDialogueEvent.cs" t="Include" />
+                  </e>
+                  <e p="Timeline" t="Include">
+                    <e p="TimelineTrigger.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Quests" t="Include">
+                  <e p="IncrementOnDestroy.cs" t="Include" />
+                  <e p="QuestLogWindowHotkey.cs" t="Include" />
+                  <e p="QuestStateIndicator.cs" t="Include" />
+                  <e p="QuestStateListener.cs" t="Include" />
+                </e>
+                <e p="Save System" t="Include">
+                  <e p="ConversationStateSaver.cs" t="Include" />
+                  <e p="DialogueSystemSaver.cs" t="Include" />
+                  <e p="GameSaver.cs" t="Include" />
+                  <e p="LevelManager.cs" t="Include" />
+                  <e p="PersistentActiveData.cs" t="Include" />
+                  <e p="PersistentDestructible.cs" t="Include" />
+                  <e p="PersistentPositionData.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="LinesColoredBlended.shader" t="Include" />
+                </e>
+                <e p="Triggers" t="Include">
+                  <e p="Interaction" t="Include">
+                    <e p="ProximitySelector.cs" t="Include" />
+                    <e p="Selector.cs" t="Include" />
+                    <e p="SelectorFollowTarget.cs" t="Include" />
+                    <e p="Usable.cs" t="Include" />
+                  </e>
+                  <e p="Trigger" t="Include">
+                    <e p="BarkOnIdle.cs" t="Include" />
+                    <e p="ConditionObserver.cs" t="Include" />
+                    <e p="DialogueSystemTrigger.cs" t="Include" />
+                    <e p="RangeTrigger.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="UI" t="Include">
+                  <e p="Standard" t="Include">
+                    <e p="Bark" t="Include">
+                      <e p="StandardBarkUI.cs" t="Include" />
+                    </e>
+                    <e p="Dialogue" t="Include">
+                      <e p="StandardDialogueUI.cs" t="Include" />
+                      <e p="StandardUIInputField.cs" t="Include" />
+                      <e p="StandardUIMenuPanel.cs" t="Include" />
+                      <e p="StandardUIResponseButton.cs" t="Include" />
+                      <e p="StandardUISubtitlePanel.cs" t="Include" />
+                    </e>
+                    <e p="Effects" t="Include">
+                      <e p="StandardUIColorText.cs" t="Include" />
+                      <e p="StandardUIContinueButtonFastForward.cs" t="Include" />
+                      <e p="StandardUIIgnorePauseCodes.cs" t="Include" />
+                    </e>
+                    <e p="Quest" t="Include">
+                      <e p="Common" t="Include">
+                        <e p="StandardUIButtonTemplate.cs" t="Include" />
+                        <e p="StandardUIFoldoutTemplate.cs" t="Include" />
+                        <e p="StandardUITextTemplate.cs" t="Include" />
+                        <e p="StandardUIToggleTemplate.cs" t="Include" />
+                      </e>
+                      <e p="StandardUIQuestLogWindow.cs" t="Include" />
+                      <e p="StandardUIQuestTitleButtonTemplate.cs" t="Include" />
+                      <e p="StandardUIQuestTracker.cs" t="Include" />
+                      <e p="StandardUIQuestTrackTemplate.cs" t="Include" />
+                    </e>
+                    <e p="Selector" t="Include">
+                      <e p="SelectorUseStandardUIElements.cs" t="Include" />
+                      <e p="StandardUISelectorElements.cs" t="Include" />
+                      <e p="StandardUsableUI.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="TextMesh" t="Include">
+                    <e p="LocalizeTextMesh.cs" t="Include" />
+                  </e>
+                  <e p="Unity UI" t="Include">
+                    <e p="Bark" t="Include">
+                      <e p="UnityUIBarkUI.cs" t="Include" />
+                    </e>
+                    <e p="Dialogue" t="Include">
+                      <e p="OverrideUnityUIDialogueControls.cs" t="Include" />
+                      <e p="Portraits" t="Include">
+                        <e p="AnimatedPortrait.cs" t="Include" />
+                        <e p="UseAnimatedPortraits.cs" t="Include" />
+                      </e>
+                      <e p="UnityUIBarkSubtitleDialogueUI.cs" t="Include" />
+                      <e p="UnityUIDialogueUI.cs" t="Include" />
+                      <e p="UnityUIResponseButton.cs" t="Include" />
+                      <e p="UnityUITextFieldUI.cs" t="Include" />
+                      <e p="UnityUITimer.cs" t="Include" />
+                    </e>
+                    <e p="Effects" t="Include">
+                      <e p="LocalizeUIText.cs" t="Include" />
+                      <e p="UnityUIContinueButtonFastForward.cs" t="Include" />
+                      <e p="UpdateLocalizedUITexts.cs" t="Include" />
+                    </e>
+                    <e p="Quest" t="Include">
+                      <e p="UnityUIQuestGroupTemplate.cs" t="Include" />
+                      <e p="UnityUIQuestLogWindow.cs" t="Include" />
+                      <e p="UnityUIQuestTemplate.cs" t="Include" />
+                      <e p="UnityUIQuestTemplateAlternateDescriptions.cs" t="Include" />
+                      <e p="UnityUIQuestTitle.cs" t="Include" />
+                      <e p="UnityUIQuestTracker.cs" t="Include" />
+                      <e p="UnityUIQuestTrackTemplate.cs" t="Include" />
+                    </e>
+                    <e p="Selector" t="Include">
+                      <e p="UnityUISelectorDisplay.cs" t="Include" />
+                      <e p="UnityUISelectorElements.cs" t="Include" />
+                      <e p="UsableUnityUI.cs" t="Include" />
+                    </e>
+                  </e>
+                  <e p="Utility" t="Include">
+                    <e p="PreloadActorPortraits.cs" t="Include" />
+                    <e p="TextMeshProTypewriterEffect.cs" t="Include" />
+                    <e p="UIButtonKeyTrigger.cs" t="Include" />
+                    <e p="UnityUIColorText.cs" t="Include" />
+                    <e p="UnityUIIgnorePauseCodes.cs" t="Include" />
+                    <e p="UnityUIScrollbarEnabler.cs" t="Include" />
+                    <e p="UnityUITypewriterEffect.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Utility" t="Include">
+                  <e p="AlwaysFaceCamera.cs" t="Include" />
+                  <e p="CommonLibraryLua.cs" t="Include" />
+                  <e p="ConversationLogger.cs" t="Include" />
+                  <e p="ConversationPositionStack.cs" t="Include" />
+                  <e p="LuaConsole.cs" t="Include" />
+                  <e p="LuaNetworkCommands.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
+          <e p="CinemachineFixScript.cs" t="Include" />
           <e p="DoorScript.cs" t="Include" />
+          <e p="Enemies" t="Include">
+            <e p="BearScriptNew.cs" t="Include" />
+            <e p="EnemyScript.cs" t="Include" />
+            <e p="Knockback.cs" t="Include" />
+          </e>
           <e p="MainGameScripts" t="Include">
             <e p="CameraMovement.cs" t="Include" />
             <e p="DialogueHolder.cs" t="Include" />
@@ -24,6 +516,7 @@
             <e p="BeaconScript.cs" t="Include" />
             <e p="BeaconSpawner.cs" t="Include" />
             <e p="BearScript.cs" t="Include" />
+            <e p="BearSpawner.cs" t="Include" />
             <e p="EnemyCounterScript.cs" t="Include" />
             <e p="EnemySpawnerMG.cs" t="Include" />
             <e p="HealthDisplay.cs" t="Include" />

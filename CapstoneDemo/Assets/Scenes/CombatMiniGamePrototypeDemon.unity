@@ -603,13 +603,18 @@ MonoBehaviour:
   currentSprint: 0
   maxSprint: 100
   score: 0
-  beaconLight: {fileID: 0}
+  fightPhase: 0
+  scoreIsIncreased: 0
+  bears: {fileID: 2047840571547086212, guid: 72e806fe5be8a0545bff812bbf7cfce8, type: 3}
+  creaturesKilled: 0
+  beaconLight: {fileID: 8247495135755363574, guid: 0b4494de0df4ab1498183c4c74388476,
+    type: 3}
   shadows: {fileID: 1955029852868929020, guid: 688489de109b8bc4d8243037af08d7c1, type: 3}
   timer: 0
-  dashSpeed: 0
-  startDashTime: 0
+  dashSpeed: 50
+  startDashTime: 0.1
   canAttack: 0
-  bullet: {fileID: 0}
+  bullet: {fileID: 3166770674822528142, guid: 38f8a135134d06d4d8d1660b462221df, type: 3}
   instBullet: {fileID: 0}
   enemyAlive: 0
 --- !u!50 &351178600
@@ -3582,7 +3587,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514573664}
-  - component: {fileID: 1514573666}
   - component: {fileID: 1514573665}
   m_Layer: 0
   m_Name: EnemySpawnerGroup
@@ -3628,32 +3632,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71efae17edb362a46ae45b36d729265e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1514573666
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1514573663}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.1082077, y: -1.5964379}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 16.040695, y: 12.087649}
-  m_EdgeRadius: 0
+  SpawnPositions:
+  - {fileID: 1441242920}
+  - {fileID: 1718172326}
+  - {fileID: 448164200}
+  - {fileID: 1177141298}
+  - {fileID: 764366650}
+  - {fileID: 979520475}
+  - {fileID: 224225577}
+  - {fileID: 404720364}
+  - {fileID: 1462007168}
+  - {fileID: 189671357}
+  - {fileID: 1155254806}
+  shadowPrefab: {fileID: 1955029852868929020, guid: 688489de109b8bc4d8243037af08d7c1,
+    type: 3}
+  PlayerScript: {fileID: 351178599}
 --- !u!1 &1518429974
 GameObject:
   m_ObjectHideFlags: 0
